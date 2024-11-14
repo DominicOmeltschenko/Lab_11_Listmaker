@@ -48,6 +48,6 @@ public class Main {
         arrList.remove((SafeInput.getRangedInt(pipe,"Which item would you like to remove from your list" + "[ " + 1 + " - " + arrList.size() + " ]" , 1 , arrList.size() )) - 1);
     }
     public static void insertItem() {
-        arrList.set((SafeInput.getRangedInt(pipe,"Where would you like to insert your item" + "[ " + 1 + " - " + arrList.size() + " ]" , 1, arrList.size()) - 1), SafeInput.getNonZeroLenString(pipe,"What would you like to add to your list"));
+        arrList.add((SafeInput.getRangedInt(pipe,"Where would you like to insert your item" + "[ " + 1 + " - " + arrList.size() + " ]" , 1, arrList.size()) - 1), SafeInput.getNonZeroLenString(pipe,"What would you like to add to your list"));
     }
 }
