@@ -25,6 +25,7 @@ public class Main {
                         break;
                     case "P":
                         display();
+                        System.out.println();
                         break;
                 }
 
