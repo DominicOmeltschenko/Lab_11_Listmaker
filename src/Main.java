@@ -14,14 +14,14 @@ public class Main {
                 if (currentChoice.equalsIgnoreCase("a"))
                 {
                     addItem();
-
                 }
                 else if (currentChoice.equalsIgnoreCase("d"))
                 {
                     deleteItem();
                 }
-                else if (currentChoice.equalsIgnoreCase("i")) {
-
+                else if (currentChoice.equalsIgnoreCase("i"))
+                {
+                    insertItem();
                 }
                 else if (currentChoice.equalsIgnoreCase("p"))
                 {
@@ -46,5 +46,8 @@ public class Main {
     {
         display();
         arrList.remove((SafeInput.getRangedInt(pipe,"Which item would you like to remove from your list" + "[ " + 1 + " - " + arrList.size() + " ]" , 1 , arrList.size() )) - 1);
+    }
+    public static void insertItem() {
+        arrList.set((SafeInput.getRangedInt(pipe,"Where would you like to insert your item" + "[ " + 1 + " - " + arrList.size() + " ]" , 1, arrList.size()) - 1), SafeInput.getNonZeroLenString(pipe,"What would you like to add to your list"));
     }
 }
